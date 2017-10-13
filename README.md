@@ -30,7 +30,15 @@
 
 **Quick Install:**
 
-    git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+* For stable releases:
+  ```shell
+  git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+  ```
+
+* For development updates and participation:
+  ```shell
+  git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
+  ```
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
