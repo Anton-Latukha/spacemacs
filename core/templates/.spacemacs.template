@@ -39,21 +39,182 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
+     helm    ; Crusial, Do not disable! Provides an easy-to-use API for developers wishing to build their own Helm applications in Emacs, powerful search tools and dozens of already built-in commands providing completion to almost everything. Emacs framework for incremental completions and narrowing selections.
      ;; auto-completion
-     ;; better-defaults
-     emacs-lisp
-     ;; git
-     ;; markdown
+     ;; better-defaults    ; Better keybindings for Emacs hotkey mode (in config contrary Vim bindings used
+     emacs-lisp    ; Crusial, Do not disable!
      multiple-cursors
      treemacs
-     ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
-     ;; version-control
+     spell-checking
+     ;; version-control    ; Emacs support for different VCS (caustion, can collide with separate Git control layers/configs
+     ;; ----------------------------------------------------------------
+     ;; Manually configured block
+     ;;
+
+     ;; Useful to anyone
+     syntax-checking
+     (org :variables
+          org-enable-org-journal-support t ; Organization mode (useful for time tracking!, outlining, note-taking, TO DO lists, spreadsheets, hyperlinks, project planning, GTD, HTML and LaTeX authoring) (real name: evil-org-mode on org-mode of Emacs)
+          org-agenda-files '(
+                             "~/org/"
+                             "~/org/brain/"
+                             )
+          org-highest-priority ?A
+          org-default-priority ?E
+          org-lowest-priority ?E
+          org-tags-match-list-sublevels 'indented ;; in tags search indent sublevels of entries
+          org-agenda-todo-list-sublevels nil ;; do not include sublevel TODOs into agenda result
+          org-todo-keywords '((sequence "TODO" "WAITING" "IN-PROGRESS" "REVIEW" "|" "DONE" "DELEGATED"))
+          org-journal-dir "~/org/journal/"
+          org-journal-file-format "%Y-%m-%d"
+          )
+
+     (haskell :variables
+              haskell-enable-hindent t
+              )
+     javascript
+     shell-scripts
+
+     csv
+     html
+     markdown
+     yaml
+
+     sql
+
+     (git :variables
+          magit-repository-directories '(
+                                         ("~/src/" . 3)
+                                         ("/etc/nixos/" . 1)
+                                         ("/btrfs/important/Personal/Technical/Git/" . 3)
+                                         ("/btrfs/important/Personal/Technical/Experiments/" . 3)
+                                         ("~/.emacs.d" . 0)
+                                         ("~/.spacemacs.d" . 1)
+                                         ("~/org" . 2)
+                                         )
+          magit-repolist-columns '(
+                                   ("Name"    25 magit-repolist-column-ident                  ())
+                                   ("Version" 25 magit-repolist-column-version                ())
+                                   ("D"        1 magit-repolist-column-dirty                  ())
+                                   ("L<U"      3 magit-repolist-column-unpulled-from-upstream ((:right-align t)))
+                                   ("L>U"      3 magit-repolist-column-unpushed-to-upstream   ((:right-align t)))
+                                   ("Path"    99 magit-repolist-column-path                   ())
+                                   )
+          )
+
+
+     ;; Preferences
+     ;;
+     ;; Note: some layers require installed packages on system to work with, and enable some features. Look at documentation at URL mentioned at the end of code section.
+     ;;
+
+     ;; spell-checking ; Requires aspell and `aspell` dictionary installed for your national languages (aka `aspell-en`)
+     auto-completion
+     ;; semantic    ; Collection of Emacs Development Environment Tools
+     ;; ipython-notebook
+
+     ;; == International support
+     ;; unicode-fonts    ; Fonts for any ethnic languages
+     ;; keyboard-layout    ; Support for any keyboard layouts
+     ;; chinese
+
+     ;; == Programming languages
+     ;; agda
+     ;; asm
+     ;; c-c++
+     ;; clojure
+     ;; common-lisp
+     ;; coq
+     ;; csharp
+     ;; d
+     ;; elixir
+     ;; erlang
+     ;; fsharp
+     ;; go
+     ;; groovy
+     ;; java
+     ;; lua
+     ;; ocaml
+     ;; perl5
+     ;; perl6
+     ;; php
+     ;; purescript
+     python
+     ;; racket
+     ;; ruby
+     ;; rust
+     ;; scala
+     ;; scheme
+     ;; semantic-web    ; Support for Turtle language
+     ;; swift
+     typescript
+     ;; windows-script
+
+     ;; == Frameworks
+     ;; django
+     ;; react
+     ;; ruby-on-rails
+
+     ;; == Domain Specific Languages (DSL)
+     ;; gpu    ; Languages to work with GPUs
+     ;; major-modes    ; Support of more rare case DSL languages, like Arduino, MATLAB, QML, Vala, Wolfram...
+     ;; plantuml
+
+     ;; == Markup languages
+     ;; graphviz
+     ;; latex
+     ;; protobuf
+     ;; restructuredtext
+
+     ;; == Tools
+     ansible
+     (dash :variables ; Dash macOS & Zeal offline documentation tools
+            helm-dash-docset-newpath "~/.local/share/Zeal/Zeal/docsets"
+            )
+
+     docker
+     ;; nginx
+     ;; node    ; Package manager
+     ;; pandoc
+     ;; pdf-tools
+     ;; puppet
+     ;; restclient
+     ;; salt    ; Configuration management tool
+     (shell :variables
+            shell-default-shell 'eshell
+            )
+     ;; sphinx    ; Documentation generator by Python
+     systemd
+     (terraform :variables terraform-auto-format-on-save t)
+     ;; tmux
+     ;; transmission    ; Torrent client
+     ;; vagrant
+
+     ;; == Great
+     ;; slack
+     ;; osx
+     ;; search-engine    ; Support of many search engines
+     ;; elfeed    ; Atom and RSS feeds. Elfeed, a web feeds client
+     ;; evernote
+     spotify
+     ;; twitter
+     nixos
+     ;; floobits    ; Support for pair programming
+
+     ;; For fun
+     colors    ; Too extreme fancy coloring
+     ;; emoji    ; yes :satisfied:. But caution, it going to conflict with org-mode ':' symbol in time tracking
+     ;; games
+     ;; selectic    ; Typewriter typing sound
+     ;; xkcd    ; xkcd
+
+     ;;
+     ;; For more layers and info: http://spacemacs.org/layers/LAYERS.html
+     ;;
+     ;; ----------------------------------------------------------------
      )
 
    ;; List of additional packages that will be installed without being
@@ -63,7 +224,12 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(
+                                      ;; 'pocket-reader
+                                      ;; 'eww
+                                      ;; 's ;; Add string manipulation library particulatry for org-protocol-capture.el
+                                      ;; 'org-protocol
+                                      )
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -204,10 +370,12 @@ It should only modify the values of Spacemacs settings."
 
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
-                               :weight normal
-                               :width normal)
+   ;;dotspacemacs-default-font '("Inconsolata LGC"
+   ;;                            :size 13
+   ;;                            :weight normal
+   ;;                            :width normal
+   ;;                            :powerline-scale 1.1
+   ;;                            )
 
    ;; The leader key (default "SPC")
    dotspacemacs-leader-key "SPC"
@@ -347,7 +515,7 @@ It should only modify the values of Spacemacs settings."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'relative
 
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
@@ -455,6 +623,134 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+
+  ;; ----------------------------------------------------------------
+  ;; Manually configured block
+  ;;
+  ;;
+  ;; FIXME: Agressive indentation broken for Haskell
+  ;; (global-aggressive-indent-mode 1)
+  (spacemacs/toggle-indent-guide-globally-on)
+  (spacemacs/toggle-truncate-lines-off)    ;; turn-off truncating lines by default
+  ;; WND: Nix layer global mode intendation problem (https://github.com/NixOS/nix-mode/issues/36) by using relativev-intendation
+  ;;(eval-after-load 'nix-mode
+  ;;  (add-hook 'nix-mode-hook
+  ;;  (lambda ()
+  ;;  (setq-local indent-line-function #'indent-relative))))
+  ;; ----------------------------------------------------------------
+  (add-hook 'haskell-mode-hook 'turn-on-haskell-unicode-input-method)
+  (add-hook 'org-mode-hook #'spacemacs/toggle-truncate-lines-off)    ;; turn-off truncating lines in org-mode - wrap them all
+
+  ;;;;
+  ;;;; This hides :PROPERTIES: in org files
+  ;;;;
+  (require 'org) ;; This is dumb copy-paste requirement for :PROPERTIES: drawer hiding to work in org-cycle-hide-drawers
+  (defun org-cycle-hide-drawers (state) ;; Function to hide all :PROPERTIES: drawers. From this thread: https://www.reddit.com/r/emacs/comments/6tewyl/hide_properties_drawer/
+    "Re-hide all drawers after a visibility state change."
+    (when (and (derived-mode-p 'org-mode)
+               (not (memq state '(overview folded contents))))
+      (save-excursion
+        (let* ((globalp (memq state '(contents all)))
+               (beg (if globalp
+                        (point-min)
+                      (point)))
+               (end (if globalp
+                        (point-max)
+                      (if (eq state 'children)
+                          (save-excursion
+                            (outline-next-heading)
+                            (point))
+                        (org-end-of-subtree t)))))
+          (goto-char beg)
+          (while (re-search-forward org-drawer-regexp end t)
+            (save-excursion
+              (beginning-of-line 1)
+              (when (looking-at org-drawer-regexp)
+                (let* ((start (1- (match-beginning 0)))
+                       (limit
+                        (save-excursion
+                          (outline-next-heading)
+                          (point)))
+                       (msg (format
+                             (concat
+                              "org-cycle-hide-drawers:  "
+                              "`:END:`"
+                              " line missing at position %s")
+                             (1+ start))))
+                  (if (re-search-forward "^[ \t]*:END:" limit t)
+                      (outline-flag-region start (point-at-eol) t)
+                    (user-error msg))))))))))
+
+  ;;;;
+  ;;;; This is working org-protocol link capture with:
+  ;;;;
+  (require 'org-capture) ;; For org-protocol
+  (require 'org-protocol) ;; For org-protocol
+  (setq org-capture-templates `(
+                                ("p" "Protocol" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
+                                 "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
+	                              ("L" "Protocol Link" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
+                                 "* [[%:link][%:description]] %?")
+                                )
+        )
+
+  (defun my-indent-setup (n) ;; Group the setting of indent into one variable 'standard indent'
+    (setq-default standard-indent n)
+    (setq-default evil-shift-width n)
+    (setq-default tab-width n)
+    (setq-default cperl-indent-level n)
+    (setq-default python-indent-offset n)
+    ;; java/c/c++
+    (setq-default c-basic-offset n)
+    ;; web development
+    (setq-default coffee-tab-width n) ; coffeescript
+    (setq-default javascript-indent-level n) ; javascript-mode
+    (setq-default js-indent-level n) ; js-mode
+    (setq-default js2-basic-offset n) ; js2-mode, in latest js2-mode, it's alias of js-indent-level
+    (setq-default web-mode-markup-indent-offset n) ; web-mode, html tag in html file
+    (setq-default web-mode-css-indent-offset n) ; web-mode, css in html file
+    (setq-default web-mode-code-indent-offset n) ; web-mode, js code in html file
+    (setq-default css-indent-offset n) ; css-mode
+    )
+  (my-indent-setup 2)
+
+  ;; (setq org-tags-column '(-111))    ;; If negative - align right margin to column number static approach
+  ;;;;
+  ;;;; This aligns org-mode tags to the window border
+  (add-hook 'focus-in-hook
+            (lambda () (progn
+                         (setq org-tags-column (- 7 (window-body-width)))) (org-align-all-tags)))
+  (add-hook 'focus-out-hook
+            (lambda () (progn
+                         (setq org-tags-column (- 7 (window-body-width)))) (org-align-all-tags)))
+
+  ;; ;;;;
+  ;; ;;;; This tries to make org-protocol work as a Pocket capture with pandoc: https://github.com/alphapapa/org-protocol-capture-html
+  ;; ;;;;
+  ;; (require 'org-capture) ;; For org-protocol
+  ;; (require 'org-protocol) ;; For org-protocol
+  ;; (require 'org-protocol-capture-html) ;; Try to lazy load the org-protocol-capture handler https://github.com/alphapapa/org-protocol-capture-html
+  ;; (setq org-capture-templates `(
+  ;;                               ("w" "Web site" entry (file+headline ,(concat org-directory "/brain/main.org") "Inbox")
+  ;;                                "* %a :website:\n\n%U %?\n\n%:initial")
+  ;;                               )
+  ;;       )
+
+  ;; ;;;;
+  ;; ;;;; This block tried to fold all code blocks in files:
+  ;; ;;;;
+  ;; (let ((default-directory  "~/.spacemacs.d/lisp/")) ;; Loading customization el sources
+  ;;   (normal-top-level-add-subdirs-to-load-path))
+  ;; (load-library "persistent-overlays")
+  ;; (when (not (< emacs-major-version 24)) ;; minor modes on by default for all programming modes
+  ;;   (add-hook 'prog-mode-hook (lambda () (hs-minor-mode 1) (setq hs-allow-nesting t) (persistent-overlays-minor-mode 1))))
+  ;; (when (not (> emacs-major-version 23))
+  ;;   (add-hook 'c-mode-hook (lambda () (hs-minor-mode 1) (setq hs-allow-nesting t) (persistent-overlays-minor-mode 1)))
+  ;;   (add-hook 'c++-mode-hook (lambda () (hs-minor-mode 1) (setq hs-allow-nesting t) (persistent-overlays-minor-mode 1)))
+  ;;   (add-hook 'emacs-lisp-mode-hook (lambda () (hs-minor-mode 1) (setq hs-allow-nesting t) (persistent-overlays-minor-mode 1)))
+
+  ;;   )
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
