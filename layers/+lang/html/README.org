@@ -1,6 +1,6 @@
 #+TITLE: HTML layer
 
-#+TAGS: layer|uncategorized
+#+TAGS: layer|markup
 
 [[file:img/html.png]]
 

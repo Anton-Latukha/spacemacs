@@ -1,6 +1,6 @@
 #+TITLE: CSV layer
 
-#+TAGS: layer|uncategorized
+#+TAGS: layer|markup
 
 [[file:img/csv.png]]
 

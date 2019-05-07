@@ -1,6 +1,6 @@
 #+TITLE: reStructuredText layer
 
-#+TAGS: layer|uncategorized
+#+TAGS: layer|markup
 
 [[file:img/restructuredtext.png]]
 

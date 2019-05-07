@@ -1,6 +1,6 @@
 #+TITLE: BibTeX layer
 
-#+TAGS: layer|uncategorized
+#+TAGS: layer|markup
 
 [[file:img/logo.png]]
 

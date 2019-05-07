@@ -1,6 +1,6 @@
 #+TITLE: Markdown layer
 
-#+TAGS: layer|uncategorized
+#+TAGS: layer|markup
 
 [[file:img/markdown.png]]
 

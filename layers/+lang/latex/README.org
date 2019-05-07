@@ -1,6 +1,6 @@
 #+TITLE: LaTeX layer
 
-#+TAGS: layer|uncategorized
+#+TAGS: layer|markup
 
 [[file:img/latex.png]]
 
