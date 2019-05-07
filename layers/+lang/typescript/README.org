@@ -1,6 +1,6 @@
 #+TITLE: TypeScript layer
 
-#+TAGS: layer|uncategorized
+#+TAGS: layer|programming|general|multi-paradigm|js
 
 [[file:img/TypeScript.png]]
 
