@@ -1,6 +1,6 @@
 #+TITLE: Vimscript language layer
 
-#+TAGS: layer|uncategorized
+#+TAGS: layer|programming|dsl|script
 
 * Table of Contents                     :TOC_4_gh:noexport:
 - [[#description][Description]]

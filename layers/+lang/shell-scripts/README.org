@@ -1,6 +1,6 @@
 #+TITLE: Shell Scripts layer
 
-#+TAGS: layer|uncategorized
+#+TAGS: layer|programming|dsl|script
 
 [[file:img/fish.png]]
 
