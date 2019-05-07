@@ -1,6 +1,6 @@
 #+TITLE: SML layer
 
-#+TAGS: layer|uncategorized
+#+TAGS: layer|programming|general|multi-paradigm
 
 [[file:img/sml.png]]
 

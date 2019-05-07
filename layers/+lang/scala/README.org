@@ -1,6 +1,6 @@
 #+TITLE: Scala layer
 
-#+TAGS: layer|uncategorized
+#+TAGS: layer|programming|general|multi-paradigm
 
 [[file:img/scala.png]] with [[file:img/ensime.png]]
 
