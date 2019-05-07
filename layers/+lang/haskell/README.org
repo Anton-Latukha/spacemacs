@@ -1,6 +1,6 @@
 #+TITLE: Haskell layer
 
-#+TAGS: layer|uncategorized
+#+TAGS: layer|programming|general|pure
 
 [[file:img/haskell.png]]
 
